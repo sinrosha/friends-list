@@ -15,5 +15,13 @@ You will also see any lint errors in the console.
 
 ### `npm run build`
 
-Builds the app for production to the `dist` folder.\
+Builds the app for production to the `dist` folder.
+
+### `Component Hierarchy`
+
+App
+    - Header
+        - Filter
+    - AddFriend
+    - FriendList
 

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+#root {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/bg-image.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.app {
+    width: 50vw;
+    box-sizing: border-box;
+    border-radius: 7px;
+    background: #ffffff8f;
+    margin-top: 10vh;
+    box-shadow: 0px 2px 12px -3px rgba(123,88,88,0.75);
+    -webkit-box-shadow: 0px 2px 12px -3px rgba(123,88,88,0.75);
+    -moz-box-shadow: 0px 2px 12px -3px rgba(123,88,88,0.75);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    display: flex;
+}
+
+.show-favourites label {
+    font-size: 12px;
+}
+
+.show-favourites input {
+    margin: 0 5px 0 0;
+    vertical-align: bottom;
+}
+
+.search-friend {
+    margin-left: 10px;
+}
+
+.search-friend input {
+    border: 0;
+    background: transparent;
+}
+
+.search-friend label {
+    border-bottom: 2px solid #746a6a;
+    margin-left: 10px;
+    min-width: 120px;
+    color: #73696a;
+}
+
+.search-friend input:focus,
+.add-friend input:focus,
+button:focus {
+    outline: 0;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #746a6a;
+}
+
+.add-friend,
+.friend {
+    border-bottom: 2px solid #cbb8a7;
+}
+
+.add-friend input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 17px 20px;
+    font-size: 14px;
+    border: 0;
+    color: #73696a;
+}
+
+.friend {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+p {
+    font-size: 14px;
+    color: #73696a;
+}
+
+button {
+    border: 2px solid #cbb8a7;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background: #ead8ca;
+}
+
+button:last-child {
+    margin-left: 10px;
+}
+
+button svg {
+    font-size: 16px;
+}
+
+.friend:last-child {
+    border: 0;
+}
+
+.friend-already-exists {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.no-fav,
+.no-search {
+    padding: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .app {
+        width: 80vw;
+    }
+
+    .filter {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    
+    .search-friend {
+        margin: 10px 0 0 0;
+    }
+
+    .search-friend label {
+        margin-left: 0;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    p  {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 3px 7px;
+    }
+
+    button svg {
+        font-size: 14px;
+    }
+}
