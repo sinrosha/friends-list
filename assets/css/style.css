@@ -4,7 +4,6 @@
     width: 100%;
     min-height: 100vh;
     background: url("../images/bg-image.jpg") no-repeat center center;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: flex-start;

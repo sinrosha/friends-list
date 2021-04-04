@@ -11,6 +11,8 @@ The app's state is stored in localstorage that keeps the data even after page re
 
 ## Available Scripts
 
+Clone the repo and cd into it and `run npm install`to setup the project on your local system.
+
 In the project directory, you can run:
 
 ### `npm start`
@@ -26,14 +28,4 @@ You will also see any lint errors in the console.
 
 Builds the app for production to the `dist` folder.
 
-### `Component Hierarchy`
-
-App
-    - Header
-        - Filter
-    - AddFriend
-    - FriendList
-        - FriendInfo
-        - FriendActions
-        - Pagination
 

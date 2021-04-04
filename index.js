@@ -66,7 +66,7 @@ class App extends React.Component {
 
     removeFriend(friendtoRemove) {
         const newFriendList = this.state.friends.filter(friend => friendtoRemove !== friend.name);
-        this.setState({ friends: newFriendList}, () => localStorage.setItem("friends", JSON.stringify(this.state.friends)));
+        this.setState({ friends: newFriendList, currentPage: 1}, () => localStorage.setItem("friends", JSON.stringify(this.state.friends)));
     }
 
     render() {
