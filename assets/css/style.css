@@ -89,6 +89,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 
@@ -140,6 +141,29 @@ button svg {
     padding: 20px;
 }
 
+.confirm-delete {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 1;
+    background: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm-delete p {
+    width: 70%;
+    line-height: 1.6;
+}
+
+strong {
+    font-weight: 600;
+}
+
 @media screen and (max-width: 480px) {
     .app {
         width: 80vw;
@@ -173,5 +197,9 @@ button svg {
 
     button svg {
         font-size: 14px;
+    }
+
+    .confirm-delete p {
+        width: 60%;
     }
 }

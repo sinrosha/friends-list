@@ -36,11 +36,7 @@ class App extends React.Component {
     }
 
     addFriend(friendToBeAdded) {
-        const newFriend = {
-            name: friendToBeAdded,
-            isFavourite: false
-        }
-
+        const newFriend = { name: friendToBeAdded, isFavourite: false}
         this.setState(prevState => ( { friends: prevState.friends.concat(newFriend) } ), () => localStorage.setItem("friends", JSON.stringify(this.state.friends)));
     }
 
@@ -53,15 +49,14 @@ class App extends React.Component {
     }
 
     toggleFavourites() {
-        this.setState({ showFavorites: !this.state.showFavorites}, () => localStorage.setItem("showFavorites", this.state.showFavorites))
+        this.setState({ showFavorites: !this.state.showFavorites, currentPage: 1}, () => localStorage.setItem("showFavorites", this.state.showFavorites))
     }
 
     updateSearchTerm(searchTerm) {
-        this.setState({ searchTerm }, () => localStorage.setItem("searchTerm", this.state.searchTerm))
+        this.setState({ searchTerm, currentPage: 1 }, () => localStorage.setItem("searchTerm", this.state.searchTerm))
     }
 
     handleNavigation(action) {
-        const {friends, currentPage} = this.state;
         if(action === "prev") {
           this.setState({ currentPage: this.state.currentPage - 1 })
         } else if(action === "next") {
@@ -84,10 +79,7 @@ class App extends React.Component {
                     updateSearchTerm={this.updateSearchTerm} 
                     searchTerm={searchTerm}
                 />
-                <AddFriend 
-                    friends={friends} 
-                    addFriend={this.addFriend}
-                />
+                <AddFriend  friends={friends} addFriend={this.addFriend} />
                 <FriendList 
                     friends={friends} 
                     favouriteFriend={this.favouriteFriend} 
@@ -102,7 +94,4 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <App/>, 
-    document.getElementById("root")
-);
+ReactDOM.render( <App/>,  document.getElementById("root"));

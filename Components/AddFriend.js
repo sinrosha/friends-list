@@ -45,7 +45,7 @@ class AddFriend extends React.Component {
                 </form>
                { this.state.friendAlreadyExists &&  
                     <div className="friend-already-exists">
-                        <p>{this.state.friend} already exists in the list</p>
+                        <p><strong>{this.state.friend}</strong> already exists in the list</p>
                         <button className="close" onClick={() => this.setState({ friendAlreadyExists: false, friend: "" })}>
                             <AiOutlineClose />
                         </button>
