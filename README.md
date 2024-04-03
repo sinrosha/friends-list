@@ -7,7 +7,7 @@ Friends List is a simple React CRUD application where you can:-
 4) Just see the favourites by checking `show favourites` checkbox
 5) You can search for a friend using the search feature
 
-The app's state is stored in localstorage that keeps the data even after page refresh. For large size of data us Cache API
+The app's state is stored in localstorage that keeps the data even after page refresh. For large size of data us Cache API.
 
 ## Available Scripts
 
